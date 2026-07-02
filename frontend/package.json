@@ -1,7 +1,25 @@
 {
   "name": "symptom-checker-frontend",
   "version": "1.0.0",
-  "description": "Frontend for Symptom Checker application",
+{
+  "name": "symptom-checker-app",
+  "version": "1.0.0",
+  "description": "Symptom Checker MERN Stack Application",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,magenta \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "build:frontend": "npm run build --prefix frontend",
+    "start:backend": "npm run start --prefix backend",
+    "lint": "npm run lint --prefix frontend"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^9.2.3"
+  }
+}  "description": "Frontend for Symptom Checker application",
   "type": "module",
   "scripts": {
     "dev": "vite",
